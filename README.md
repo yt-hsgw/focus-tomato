@@ -1,93 +1,94 @@
 # Focus Tomato 🍅
 
-A modern, clean Pomodoro timer Chrome extension to boost your productivity.
+生産性を向上させるための、モダンでクリーンなポモドーロタイマー Chrome 拡張機能です。
 
-![Focus Tomato Screenshot](https://i.imgur.com/placeholder.png)
+![Focus Tomato Screenshot](./images/image.png)
 
-## Features
+## 機能
 
-- 🎯 Clean, modern UI with a circular progress indicator
-- ⏱️ Three timer modes:
-  - Pomodoro (default: 25 minutes)
-  - Short Break (default: 5 minutes)
-  - Long Break (default: 15 minutes)
-- ⚙️ Customizable timer durations
-- 🔄 Auto-start options for breaks and pomodoros
-- 🔔 Notification sounds
-- 📱 Chrome notifications when timers complete
+- 🎯 円形のプログレスインジケーターを備えた、クリーンでモダンな UI
+- ⏱️ 3 つのタイマーモード：
+  - ポモドーロ（デフォルト：25 分）
+  - 短い休憩（デフォルト：5 分）
+  - 長い休憩（デフォルト：15 分）
+- ⚙️ タイマー持続時間のカスタマイズ
+- 🔄 休憩とポモドーロの自動開始
+- 🔔 通知音
+- 📱 タイマー完了時の Chrome 通知
 
-## Installation
+## インストール
 
-### From Chrome Web Store (Coming Soon)
+### Chrome Web Store から（近日公開予定）
 
-1. Visit the Chrome Web Store
-2. Search for "Focus Tomato"
-3. Click "Add to Chrome"
+1. Chrome Web Store にアクセスします。
+2. 「Focus Tomato」を検索します。
+3. 「Chrome に追加」をクリックします。
 
-### Manual Installation (Developer Mode)
+### 手動インストール（開発者モード）
 
-1. Clone this repository:
+1. このリポジトリをクローンします。
+
+   ```bash
+   git clone https://github.com/yt-hsgw/focus-tomato.git
    ```
-   git clone https://github.com/yourusername/focus-tomato.git
-   ```
-2. Install dependencies:
-   ```
+
+2. 依存関係をインストールします。
+
+   ```bash
    npm install
    ```
-3. Build the extension:
-   ```
+
+3. 拡張機能をビルドします。
+
+   ```bash
    npm run build:extension
    ```
-4. Open Chrome and navigate to `chrome://extensions/`
-5. Enable "Developer mode" in the top-right corner
-6. Click "Load unpacked" and select the `dist` directory
-7. The extension should now be installed and visible in your toolbar
 
-## Development
+4. Chrome を開き、`chrome://extensions/`に移動します。
+5. 右上の隅にある「開発者モード」を有効にします。
+6. 「パッケージされていない拡張機能を読み込む」をクリックし、`dist`ディレクトリを選択します。
+7. 拡張機能がインストールされ、ツールバーに表示されます。
 
-1. Clone the repository
-2. Install dependencies:
-   ```
+## 開発
+
+1. リポジトリをクローンします。
+2. 依存関係をインストールします。
+
+   ```bash
    npm install
    ```
-3. Start the development server:
-   ```
+
+3. 開発サーバーを起動します。
+
+   ```bash
    npm run dev
    ```
-4. For testing as a Chrome extension, build the extension:
-   ```
+
+4. Chrome 拡張機能としてテストするには、拡張機能をビルドします。
+
+   ```bash
    npm run build:extension
    ```
 
-## Usage
+## 使い方
 
-1. Click the extension icon in your Chrome toolbar to open the timer
-2. Select your desired timer mode (Pomodoro, Short Break, or Long Break)
-3. Click "Start" to begin the timer
-4. Use "Pause" to temporarily stop the timer and "Reset" to start over
-5. Access settings by clicking the gear icon to customize your experience
+1. Chrome ツールバーの拡張機能アイコンをクリックしてタイマーを開きます。
+2. ポモドーロ、短い休憩、長い休憩から目的のタイマーモードを選択します。
+3. 「開始」をクリックしてタイマーを開始します。
+4. 「一時停止」でタイマーを一時的に停止し、「リセット」で最初からやり直します。
+5. 設定アイコンをクリックして設定にアクセスし、体験をカスタマイズします。
 
-## Customization
+## カスタマイズ
 
-Click the settings icon to customize:
+設定アイコンをクリックしてカスタマイズできます。
 
-- Pomodoro duration (1-60 minutes)
-- Short break duration (1-30 minutes)
-- Long break duration (1-60 minutes)
-- Auto-start breaks after completing a pomodoro
-- Auto-start pomodoros after completing a break
-- Notification sound preferences
+- ポモドーロ時間（1〜60 分）
+- 短い休憩時間（1〜30 分）
+- 長い休憩時間（1〜60 分）
+- ポモドーロ完了後の休憩の自動開始
+- 休憩完了後のポモドーロの自動開始
+- 通知音の設定
 
-## Contributing
+## ライセンス
 
-Contributions are welcome! Please feel free to submit a Pull Request.
-
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add some amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
-
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
+このプロジェクトは MIT ライセンスの下でライセンスされています - 詳細は LICENSE ファイルを参照してください。
