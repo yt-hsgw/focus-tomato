@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modern Pomodoro Timer</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1>Pomodoro Timer</h1>
+      </div>
+      
+      <div class="timer-container">
+        <div class="timer-display">
+          <span id="minutes">25</span>:<span id="seconds">00</span>
+        </div>
+        <div class="progress-ring-container">
+          <svg class="progress-ring" width="220" height="220">
+            <circle
+              class="progress-ring-circle-bg"
+              stroke-width="8"
+              fill="transparent"
+              r="100"
+              cx="110"
+              cy="110"
+            />
+            <circle
+              class="progress-ring-circle"
+              stroke-width="8"
+              fill="transparent"
+              r="100"
+              cx="110"
+              cy="110"
+              id="progress-ring-circle"
+            />
+          </svg>
+        </div>
+      </div>
+      
+      <div class="controls">
+        <button id="start-btn" class="btn primary">Start</button>
+        <button id="pause-btn" class="btn secondary" disabled>Pause</button>
+        <button id="reset-btn" class="btn secondary">Reset</button>
+      </div>
+      
+      <div class="mode-selector">
+        <button id="pomodoro-btn" class="mode-btn active">Pomodoro</button>
+        <button id="short-break-btn" class="mode-btn">Short Break</button>
+        <button id="long-break-btn" class="mode-btn">Long Break</button>
+      </div>
+      
+      <div class="settings">
+        <button id="settings-btn" class="icon-btn">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-settings">
+            <path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"></path>
+            <circle cx="12" cy="12" r="3"></circle>
+          </svg>
+        </button>
+      </div>
+    </div>
+    
+    <div id="settings-modal" class="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2>Settings</h2>
+          <button id="close-settings" class="close-btn">&times;</button>
+        </div>
+        <div class="modal-body">
+          <div class="setting-item">
+            <label for="pomodoro-duration">Pomodoro Duration (minutes)</label>
+            <input type="number" id="pomodoro-duration" min="1" max="60" value="25">
+          </div>
+          <div class="setting-item">
+            <label for="short-break-duration">Short Break Duration (minutes)</label>
+            <input type="number" id="short-break-duration" min="1" max="30" value="5">
+          </div>
+          <div class="setting-item">
+            <label for="long-break-duration">Long Break Duration (minutes)</label>
+            <input type="number" id="long-break-duration" min="1" max="60" value="15">
+          </div>
+          <div class="setting-item">
+            <label for="auto-start-breaks">Auto-start Breaks</label>
+            <input type="checkbox" id="auto-start-breaks">
+          </div>
+          <div class="setting-item">
+            <label for="auto-start-pomodoros">Auto-start Pomodoros</label>
+            <input type="checkbox" id="auto-start-pomodoros">
+          </div>
+          <div class="setting-item">
+            <label for="notification-sound">Notification Sound</label>
+            <select id="notification-sound">
+              <option value="bell">Bell</option>
+              <option value="digital">Digital</option>
+              <option value="none">None</option>
+            </select>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button id="save-settings" class="btn primary">Save</button>
+        </div>
+      </div>
+    </div>
+    
+    <script src="popup.js"></script>
+  </body>
+</html>
